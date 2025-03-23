@@ -4,7 +4,7 @@
     <h2>
       Add a new movie
     </h2>
-    <% if @the_movie.empty? %>
+    <% if @the_movie.title.empty? %>
       <% pass %>
     <% else %>
       <% @the_movie.errors.full_messages..each do |msg| %>
