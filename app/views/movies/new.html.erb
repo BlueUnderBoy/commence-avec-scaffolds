@@ -7,9 +7,12 @@
     <h2>
       Add a new movie
     </h2>
-
-    <% @the_movie.errors.full_messages..each do |msg| %>
-      <li><%= msg %></li>
+    <% if @the_movie.empty? %>
+      <% pass %>
+    <% else %>
+      <% @the_movie.errors.full_messages..each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
     <% end %>
 
     <form action="/movies" method="post" data-turbo="false">
