@@ -5,7 +5,7 @@
       Add a new movie
     </h2>
     <% if @the_movie.title.nil? %>
-      <% pass %>
+      <% end %>
     <% else %>
       <% @the_movie.errors.full_messages..each do |msg| %>
         <li><%= msg %></li>
